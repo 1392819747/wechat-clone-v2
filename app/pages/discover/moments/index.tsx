@@ -24,7 +24,7 @@ import { TextInput } from "react-native-gesture-handler";
 import eventBus from "@/utils/eventBus";
 import { getSize } from "utils";
 import { useLoadingStore } from "app/store/globalLoading";
-import FastImage from "react-native-fast-image";
+import { Image } from "expo-image";
 import MomentsAvatar from "./components/MomentsAvatar";
 import ParallaxHeader, {
   HEADER_HEIGHT,
@@ -256,11 +256,13 @@ const Moments = () => {
         }}
       >
         {/* bg  */}
-        <FastImage
+        <Image
           style={{ width: "100%", height: HEADER_HEIGHT }}
           source={{
             uri: "https://img1.baidu.com/it/u=713295211,1805964126&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281",
           }}
+          contentFit="cover"
+          transition={200}
         />
 
         <Pressable
