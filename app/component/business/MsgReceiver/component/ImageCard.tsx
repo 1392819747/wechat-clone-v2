@@ -1,6 +1,6 @@
 import ImagePreview from "@/component/base/ImagePreview";
 import { TouchableOpacity } from "react-native";
-import FastImage from "react-native-fast-image";
+import { Image } from "expo-image";
 const ImageCard = ({ text, popover }) => {
   const openPreview = () => {
     console.log(text, "text-im1g");
@@ -20,16 +20,12 @@ const ImageCard = ({ text, popover }) => {
       }}
       onPress={openPreview}
     >
-      <FastImage
-      
-        defaultSource={require("@/assets/loading-image.png")}
-        source={{
-          uri:
-            // "https://placekitten.com/302/302"
-            // ||
-            text,
-        }}
+      <Image
+        placeholder={require("@/assets/loading-image.png")}
+        source={{ uri: text }}
         style={{ width: 180, height: 100 }}
+        contentFit="cover"
+        transition={200}
       />
     </TouchableOpacity>
   );
