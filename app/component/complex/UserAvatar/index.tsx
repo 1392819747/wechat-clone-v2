@@ -4,21 +4,24 @@ import {
   StyleProp,
   StyleSheet,
 } from "react-native";
+import { Image } from "expo-image";
+import type { ImageProps } from "expo-image";
 import { getSize } from "utils";
 import { themeColor } from "@/theme/light";
 import { useMemo } from "react";
-import FastImage from "react-native-fast-image";
+
+type UserAvatarProps = Omit<ImageProps, "source" | "style"> & {
+  source?: ImageSourcePropType;
+  rounded?: boolean;
+  style?: StyleProp<ImageStyle>;
+};
 
 const UserAvatar = ({
   source,
   style,
   rounded = false,
   ...rest
-}: {
-  source?: ImageSourcePropType;
-  rounded?: boolean;
-  style?: StyleProp<ImageStyle>;
-}) => {
+}: UserAvatarProps) => {
   const finalSource = useMemo(() => {
     if (typeof source === "object") {
       if (!source?.uri) {
@@ -29,7 +32,7 @@ const UserAvatar = ({
     return source;
   }, [source]);
   return (
-    <FastImage
+    <Image
       {...rest}
       source={finalSource}
       style={[
