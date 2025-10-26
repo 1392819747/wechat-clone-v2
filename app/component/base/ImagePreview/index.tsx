@@ -1,7 +1,7 @@
 import React from 'react';
 import ImagePreviewInner from './ImagePreview';
 import type { ImagePreviewProps } from './type';
-import { PortalRef } from 'app/_layout';
+import { PortalRef } from 'app/component/base/ConfigProvider';
 
 let currentKey = 0;
 

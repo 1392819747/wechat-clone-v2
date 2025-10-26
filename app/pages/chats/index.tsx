@@ -34,7 +34,7 @@ import Overlay from "@/component/base/Overlay";
 import Button from "@/component/base/Button/Button";
 import { PortalHost } from "@/component/business/Portal";
 import { playSound } from "@/utils/sound";
-import { PortalRef } from "app/_layout";
+import { PortalRef } from "app/component/base/ConfigProvider";
 import PhoneCalling, { portalKey } from "@/component/complex/PhoneCalling";
 import { useConfigState } from "app/store/globalConfig";
 const Chats = () => {
