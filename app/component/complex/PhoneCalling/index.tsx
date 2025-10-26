@@ -4,7 +4,7 @@ import { Animated, Text, View } from "react-native";
 import UserAvatar from "../UserAvatar";
 import HangUpBtn from "../HangUpBtn";
 import AcceptBtn from "../AcceptBtn";
-import { PortalRef } from "app/_layout";
+import { PortalRef } from "app/component/base/ConfigProvider";
 import axios from "axios";
 
 import { getSize } from "utils";

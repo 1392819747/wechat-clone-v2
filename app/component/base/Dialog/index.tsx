@@ -3,7 +3,7 @@ import { Cross } from "@pingtou/rn-vant-icons";
 import noop from "lodash-es/noop";
 import BaseDialog from "./Dialog";
 import type { DialogProps, AlertDialogProps } from "./type";
-import { PortalRef } from "app/_layout";
+import { PortalRef } from "app/component/base/ConfigProvider";
 
 let currentKey = 0;
 

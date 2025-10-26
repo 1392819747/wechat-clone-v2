@@ -9,7 +9,7 @@ import type {
   ToastReturnType,
 } from "./type";
 import { PortalProvider, usePortal } from "../../business/Portal";
-import { PortalRef } from "app/_layout";
+import { PortalRef } from "app/component/base/ConfigProvider";
 import { View } from "react-native";
 
 const defaultOptions: ToastProps = {
